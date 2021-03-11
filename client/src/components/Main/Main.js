@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import socket from '../../socket';
+import Logo from '../Logo/Logo';
 
 const Main = (props) => {
   const roomRef = useRef();
@@ -9,7 +10,6 @@ const Main = (props) => {
   const [errMsg, setErrMsg] = useState('');
 
   useEffect(() => {
-
     socket.on('FE-error-user-exist', ({ error }) => {
       if (!error) {
         const roomName = roomRef.current.value;
@@ -37,24 +37,58 @@ const Main = (props) => {
   }
 
   return (
-    <MainContainer>
+    <>
+      {' '}
+
+        <Logo />
+
       <Row>
-        <Label htmlFor="roomName">Room Name</Label>
-        <Input type="text" id="roomName" ref={roomRef} />
+        <Title>Video-Conference Demo</Title>
       </Row>
       <Row>
-        <Label htmlFor="userName">User Name</Label>
-        <Input type="text" id="userName" ref={userRef} />
+        <SubTitle>Start a video chat and connect with your loved ones.</SubTitle>
       </Row>
-      <JoinButton onClick={clickJoin}> Join </JoinButton>
-      {err ? <Error>{errMsg}</Error> : null}
-    </MainContainer>
+      <MainContainer>
+        <Row>
+          <Label htmlFor='roomName'>Room Name</Label>
+          <Input type='text' id='roomName' ref={roomRef} />
+        </Row>
+        <Row>
+          <Label htmlFor='userName'>User Name</Label>
+          <Input type='text' id='userName' ref={userRef} />
+        </Row>
+        <JoinButton onClick={clickJoin}> Join </JoinButton>
+        {err ? <Error>{errMsg}</Error> : null}
+      </MainContainer>
+    </>
   );
 };
+
+const Title = styled.h1`
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: whitesmoke;
+  line-height: 0.1;
+`;
+const SubTitle = styled.h2`
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  font-weight: 100;
+  color: whitesmoke;
+  line-height: 0.5;`
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  padding: 25px 45px;
+  margin: 25px;
 `;
 
 const Row = styled.div`
