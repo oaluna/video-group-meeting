@@ -13,7 +13,7 @@ This project is **deployed** at: https://video-group-chat.herokuapp.com
 - [Styled-components](https://styled-components.com/)
 - [Simple-peer](https://github.com/feross/simple-peer)
 
-**Contributors:** [Hyunse Kim](https://github.com/Hyunse)
+**Contributors:**
 [Oscar Luna](https://github.com/oaluna)
 
 ---
