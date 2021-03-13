@@ -39,14 +39,14 @@ const Main = (props) => {
   return (
     <>
       {' '}
-
-        <Logo />
-
+      <Logo />
       <Row>
         <Title>Video-Conference Demo</Title>
       </Row>
       <Row>
-        <SubTitle>Start a video chat and connect with your loved ones.</SubTitle>
+        <SubTitle>
+          Start a video chat and connect with your loved ones.
+        </SubTitle>
       </Row>
       <MainContainer>
         <Row>
@@ -76,7 +76,8 @@ const SubTitle = styled.h2`
   font-size: 36px;
   font-weight: 100;
   color: whitesmoke;
-  line-height: 0.5;`
+  line-height: 0.5;
+`;
 
 const MainContainer = styled.div`
   display: flex;

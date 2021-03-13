@@ -1,8 +1,8 @@
 # Video-Group-Meeting
 
-Videe-Group-Meeting is a simple video chat application for multi-users based on React, Node Express and WebRTC.
+Video-Group-Meeting is a simple video chat application for multi-users based on React, Node Express and WebRTC.
 
-This project is **deployed** at: https://video-group-meeting.herokuapp.com/
+This project is **deployed** at: https://video-group-chat.herokuapp.com
 
 **Technologies Used**
 
@@ -10,24 +10,25 @@ This project is **deployed** at: https://video-group-meeting.herokuapp.com/
 - Node + Express
 - WebRTC
 - Socket.io
-- [Syled-components](https://styled-components.com/)
+- [Styled-components](https://styled-components.com/)
 - [Simple-peer](https://github.com/feross/simple-peer)
 
 **Contributors:** [Hyunse Kim](https://github.com/Hyunse)
+[Oscar Luna](https://github.com/oaluna)
 
 ---
 
 ## Features
 
-- Join a room
-- Video Streaming
-- Text chat
+- Create or Join a room
+- Peer-to-peer Video Streaming
+- Messaging chat room
 - Mute Video/Audio
 - Screen Sharing
 
 ## Installation
 ### Clone
-- Clone this repo to your local machine using `https://github.com/Hyunse/video-group-meeting.git`
+- Clone this repo to your local machine using `https://github.com/oaluna/video-group-meeting.git`
 
 ### Setup
 **Client**
@@ -36,7 +37,7 @@ This project is **deployed** at: https://video-group-meeting.herokuapp.com/
   <code>
     /* Install */
     npm install
-    
+
     /* Run */
     npm start
   </code>
@@ -48,7 +49,7 @@ This project is **deployed** at: https://video-group-meeting.herokuapp.com/
   <code>
     /* Install */
     npm install
-    
+
     /* Run */
     npm run dev
   </code>
